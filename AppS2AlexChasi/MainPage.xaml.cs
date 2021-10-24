@@ -19,6 +19,8 @@ namespace AppS2AlexChasi
         {
             try
             {
+                //alexchasi prueba de github
+
                 //Almacena en variables, lo que el usuario ingresa en las cajas de texto.
                 double valor1 = Convert.ToDouble(txtValorUno.Text);
                 double n1 = valor1 * 0.3;
