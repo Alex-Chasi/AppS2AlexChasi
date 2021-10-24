@@ -35,12 +35,12 @@ namespace AppS2AlexChasi
                 {
                     //permite abrir la ventana de notas (MainPage)
                     await Navigation.PushAsync(new MainPage(usuario));
-                    await DisplayAlert("Usuario", "Usuario Correcto", "OK");
+                    await DisplayAlert("Estudiante", "Estudiante Correcto", "OK");
                 }
                 else if (txtUsuario.Text != "null")
                 {
                     //mensaje de validacion de usuario
-                    await DisplayAlert("Usuario", "Usuario InCorrecto", "OK");
+                    await DisplayAlert("Estudiante", "Estudiante InCorrecto", "OK");
 
                     // await Navigation.PushAsync(new login());
                 }
