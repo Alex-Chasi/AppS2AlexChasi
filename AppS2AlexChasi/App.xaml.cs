@@ -11,8 +11,9 @@ namespace AppS2AlexChasi
             InitializeComponent();
 
             //MainPage = new MainPage();
-
-            MainPage = new MainPage();
+            
+            //Navegacion entre ventanas
+            MainPage = new NavigationPage(new login());
 
         }
 

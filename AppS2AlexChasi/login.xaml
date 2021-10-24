@@ -4,9 +4,14 @@
              x:Class="AppS2AlexChasi.login">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Bienvenidos al SIGE" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            </Frame>
+            
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese Usuario" />
+            <Entry x:Name="txtContrasenia" Placeholder="Ingrese Contraseña"/>
+            <Button x:Name="btnIniciar" Text="Iniciar Sesión" Clicked="btnIniciar_Clicked"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
