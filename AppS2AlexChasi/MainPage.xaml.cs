@@ -83,8 +83,6 @@ namespace AppS2AlexChasi
             {
                 DisplayAlert("Mensaje de alerta", ex.Message, "Ok");
             } 
-
-
         }
     }
 }

@@ -25,16 +25,31 @@ namespace AppS2AlexChasi
                 //almacenamos en variable los datos del usuario ingresado 
                 string usuario = txtUsuario.Text;
 
+                /*
                 //permite abrir la ventana de notas (MainPage)
                 await Navigation.PushAsync(new MainPage(usuario));
+                */
 
+                //login validado
+                if (txtUsuario.Text == "estudiante2021" && txtContrasenia.Text == "uisrael2021")
+                {
+                    //permite abrir la ventana de notas (MainPage)
+                    await Navigation.PushAsync(new MainPage(usuario));
+                    await DisplayAlert("Usuario", "Usuario Correcto", "OK");
+                }
+                else if (txtUsuario.Text != "null")
+                {
+                    //mensaje de validacion de usuario
+                    await DisplayAlert("Usuario", "Usuario InCorrecto", "OK");
+
+                    // await Navigation.PushAsync(new login());
+                }
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Mensaje de Advertencia", ex.Message,"OK");
+                await DisplayAlert("Mensaje de Advertencia", ex.Message, "OK");
                 //throw;
             }
-
         }
     }
 }

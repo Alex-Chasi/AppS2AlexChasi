@@ -5,8 +5,8 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Semana 2: Elementos Visuales" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
-            <Label x:Name="lblUsuario"/>
+            <Label Text="Semana 2: Elementos Visuales Calcular" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            <Label Text="Est: " x:Name="lblUsuario"/>
         </Frame>
         <Grid>
             <Grid.RowDefinitions>
