@@ -10,9 +10,13 @@ namespace AppS2AlexChasi
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        //recibe el usuario pasamos el parametro al metodo
+        public MainPage(string usuario)
         {
             InitializeComponent();
+
+            //visualizamos en el label el usuario insertado
+            lblUsuario.Text = usuario;
         }
 
         private void btnSumar_Clicked(object sender, EventArgs e)
@@ -79,6 +83,8 @@ namespace AppS2AlexChasi
             {
                 DisplayAlert("Mensaje de alerta", ex.Message, "Ok");
             } 
+
+
         }
     }
 }

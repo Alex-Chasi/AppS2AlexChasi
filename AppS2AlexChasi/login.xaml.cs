@@ -22,8 +22,11 @@ namespace AppS2AlexChasi
         {
             try
             {
+                //almacenamos en variable los datos del usuario ingresado 
+                string usuario = txtUsuario.Text;
+
                 //permite abrir la ventana de notas (MainPage)
-                await Navigation.PushAsync(new MainPage());
+                await Navigation.PushAsync(new MainPage(usuario));
 
             }
             catch (Exception ex)

@@ -9,7 +9,7 @@
             </Frame>
             
             <Entry x:Name="txtUsuario" Placeholder="Ingrese Usuario" />
-            <Entry x:Name="txtContrasenia" Placeholder="Ingrese Contraseña"/>
+            <Entry x:Name="txtContrasenia" Placeholder="Ingrese Contraseña" IsPassword="True"/>
             <Button x:Name="btnIniciar" Text="Iniciar Sesión" Clicked="btnIniciar_Clicked"/>
 
         </StackLayout>
