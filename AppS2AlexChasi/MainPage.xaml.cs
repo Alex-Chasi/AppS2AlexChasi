@@ -28,61 +28,106 @@ namespace AppS2AlexChasi
                 //comentario2
 
                 //Almacena en variables, lo que el usuario ingresa en las cajas de texto.
+                //variables de primera operacion 
+
                 double valor1 = Convert.ToDouble(txtValorUno.Text);
-                double n1 = valor1 * 0.3;
                 double valor2 = Convert.ToDouble(txtValorDos.Text);
-                double n2 = valor2 * 0.2;
 
-                //Operacion 
-                //double suma = valor1 + valor2;
-                double suma = (n1 + n2);
-
-                //Visualizar el resultado en pantalla.
-                txtResultado.Text = suma.ToString();
-
-                //Calculo de nota de siguimiento 2
-                //Almacena en variables, lo que el usuario ingresa en las cajas de texto.
+                //variables de segunda operacion 
                 double v1 = Convert.ToDouble(txtV1.Text);
-                double np1 = v1 * 0.3;
                 double v2 = Convert.ToDouble(txtV2.Text);
-                double np2 = v2 * 0.2;
 
-                //Operacion 
-                //double suma = valor1 + valor2;
-                double suma2 = (np1 + np2);
-
-                //Visualizar el resultado en pantalla.
-                txtR2.Text = suma2.ToString();
-
-                //resultado final
-                double sumatot = suma + suma2;
-
-                //Visualizar el resultado en pantalla.
-                txtFinal.Text = sumatot.ToString();
-
-                //validacion de mensaje 
-                if (sumatot >= 7)
+                if ((valor1 >= 1 && valor1 <= 10) && (valor2 >= 1 && valor2 <= 10) && (v1 >= 1 && v1 <= 10) && (v2 >= 1 && v2 <= 10))
                 {
-                    DisplayAlert("Aprobado", "Estudiante Aprobo", "OK");
+                    //opracion 1 
+                    double n1 = valor1 * 0.3;
+                    double n2 = valor2 * 0.2;
+
+                    //double suma = valor1 + valor2;
+                    double suma = (n1 + n2);
+
+                    //Visualizar el resultado en pantalla.
+                    txtResultado.Text = suma.ToString();
+
+                    //Calculo de nota de siguimiento 2
+                    //Almacena en variables, lo que el usuario ingresa en las cajas de texto.
+                    double np1 = v1 * 0.3;
+                    double np2 = v2 * 0.2;
+
+                    //Operacion 2
+                    //double suma = valor1 + valor2;
+                    double suma2 = (np1 + np2);
+
+                    //Visualizar el resultado en pantalla.
+                    txtR2.Text = suma2.ToString();
+
+                    //resultado final
+                    double sumatot = suma + suma2;
+
+                    //Visualizar el resultado en pantalla.
+                    txtFinal.Text = sumatot.ToString();
+
+                    //validacion de mensaje 
+                    if (sumatot >= 7)
+                    {
+                        DisplayAlert("Aprobado", "Estudiante Aprobo", "OK");
+
+                    }
+                    else if (sumatot >= 5 && sumatot <= 6.9)
+                    {
+                        DisplayAlert("Complementario", "Estudiante Complementario", "OK");
+
+
+                    }
+                    else if (sumatot < 5)
+                    {
+                        DisplayAlert("Reprobado", "Estudiante Reprobado", "OK");
+
+                    }
+                }
+                else if (valor1 <= 0)
+                {
+                    DisplayAlert("Ingrese", "Ingrese nota mayor a 0", "OK");
 
                 }
-                else if (sumatot >= 5 && sumatot <= 6.9)
+                else if (valor1 > 10)
                 {
-                    DisplayAlert("Complementario", "Estudiante Complementario", "OK");
-
+                    DisplayAlert("Ingrese", "Ingrese nota menor a 10", "OK");
 
                 }
-                else if (sumatot <5)
+                else if (valor2 <= 0)
                 {
-                    DisplayAlert("Reprobado", "Estudiante Reprobado", "OK");
+                    DisplayAlert("Ingrese", "Ingrese nota mayor a 0", "OK");
 
+                }
+                else if (valor2 > 10)
+                {
+                    DisplayAlert("Ingrese", "Ingrese nota menor a 10", "OK");
+                }
+                else if (v1 <= 0)
+                {
+                    DisplayAlert("Ingrese", "Ingrese nota mayor a 0", "OK");
 
+                }
+                else if (v1 > 10)
+                {
+                    DisplayAlert("Ingrese", "Ingrese nota menor a 10", "OK");
+
+                }
+                else if (v2 <= 0)
+                {
+                    DisplayAlert("Ingrese", "Ingrese nota mayor a 0", "OK");
+
+                }
+                else if (v2 > 10)
+                {
+                    DisplayAlert("Ingrese", "Ingrese nota menor a 10", "OK");
                 }
             }
             catch (Exception ex)
             {
                 DisplayAlert("Mensaje de alerta", ex.Message, "Ok");
-            } 
+            }
         }
     }
 }
